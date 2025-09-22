@@ -1,5 +1,6 @@
 package com.example.mipt_praktika1;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView tvMessage;
     private Button btnShowText;
 
+    private Button btnTextColor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         // susiejame view'us
         tvMessage = findViewById(R.id.tvMessage);
         btnShowText = findViewById(R.id.btnShowText);
+        btnTextColor = findViewById(R.id.btnTextColor);
 
         // paspaudus mygtuką – pakeisti tekstą
         btnShowText.setOnClickListener(new View.OnClickListener() {
@@ -38,5 +42,13 @@ public class MainActivity extends AppCompatActivity {
                 tvMessage.setText(getString(R.string.hello));
             }
         });
+
+        btnTextColor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tvMessage.setTextColor(Color.RED);
+            }
+        });
+
     }
 }
