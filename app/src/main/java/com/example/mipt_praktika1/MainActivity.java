@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         btnBgColor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Comment for revert
                 tvMessage.setBackgroundColor(Color.YELLOW);
             }
         });
