@@ -4,4 +4,5 @@
     <string name="btn_show_text">Rodyti tekstą</string>
     <string name="hello">Hello World!</string>
     <string name="btn_text_color">Keisti teksto spalvą</string>
+    <string name="btn_bg_color">Keisti fono spalvą</string>
 </resources>

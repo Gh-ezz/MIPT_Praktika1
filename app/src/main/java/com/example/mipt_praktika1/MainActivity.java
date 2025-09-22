@@ -16,8 +16,9 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView tvMessage;
     private Button btnShowText;
-
     private Button btnTextColor;
+    private Button btnBgColor;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         tvMessage = findViewById(R.id.tvMessage);
         btnShowText = findViewById(R.id.btnShowText);
         btnTextColor = findViewById(R.id.btnTextColor);
+        btnBgColor = findViewById(R.id.btnBgColor);
 
         // paspaudus mygtuką – pakeisti tekstą
         btnShowText.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // paspaudus mygtuką – pakeisti teksto spalvą
         btnTextColor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,5 +53,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // paspaudus mygtuką – pakeisti fono spalvą
+        btnBgColor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tvMessage.setBackgroundColor(Color.YELLOW);
+            }
+        });
     }
 }
